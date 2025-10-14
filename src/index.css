@@ -1,0 +1,83 @@
+/* src/index.css */
+
+/* 1. Reset e Fundo do Palco */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f51f; /* Um cinza claro para o fundo da página */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo principal */
+  padding-top: 2rem; /* Espaço no topo */
+  padding-bottom: 2rem; /* Espaço embaixo */
+}
+
+/* 2. Estilos para o container principal do site */
+.site-container {
+  max-width: 1140px; /* Largura máxima do conteúdo */
+  width: 100%;
+  background-color: #ffffff; /* Fundo branco para o conteúdo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+}
+
+/* 3. Estilos do Hero (ajustados) */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 6rem 1rem;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px; 
+}
+/* Efeito de hover para os cards de serviço */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn-dourado {
+  background-color: #DAA520; /* Um tom de dourado (GoldenRod) */
+  border-color: #DAA520;
+  color: #ffffff; /* Cor do texto (branco) */
+}
+
+/* Efeito opcional ao passar o mouse */
+.btn-dourado:hover {
+  background-color: #B8860B; /* Dourado um pouco mais escuro */
+  border-color: #B8860B;
+  color: #ffffff;
+}
+.btn-dourado:active,
+.btn-dourado:focus {
+  background-color: #B8860B !important; /* Usa a cor do hover */
+  border-color: #B8860B !important;
+  color: #ffffff !important;
+  box-shadow: none !important; /* ESSENCIAL: Remove o brilho azul do Bootstrap */
+}
+.text-dourado {
+  color: #DAA520; /* Ou o tom de dourado que você preferir, por exemplo, #FFD700 */
+}
+.navcolor{
+  background-color: #fefefe;
+}
+/* O container do item do portfólio */
+.portfolio-item {
+  position: relative;
+  overflow: hidden; /* ESSENCIAL: Esconde a parte da imagem que "cresce" para fora */
+  border-radius: 0.5rem; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* A imagem dentro do container */
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease; /* Animação suave */
+}
+
+/* O efeito de hover: quando o mouse passa sobre o item, a imagem cresce */
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.1); /* Amplia a imagem em 10% */
+}
