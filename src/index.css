@@ -1,23 +1,23 @@
-/* src/index.css */
+
 
 /* 1. Reset e Fundo do Palco */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f2f51f; /* Um cinza claro para o fundo da página */
+  background-color: #f0f2f51f; 
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo principal */
-  padding-top: 2rem; /* Espaço no topo */
-  padding-bottom: 2rem; /* Espaço embaixo */
+  justify-content: center; 
+  padding-top: 2rem; 
+  padding-bottom: 2rem; 
 }
 
 /* 2. Estilos para o container principal do site */
 .site-container {
-  max-width: 1140px; /* Largura máxima do conteúdo */
+  max-width: 1140px; 
   width: 100%;
-  background-color: #ffffff; /* Fundo branco para o conteúdo */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+  background-color: #ffffff; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  overflow: hidden; 
 }
 
 /* 3. Estilos do Hero (ajustados) */
@@ -30,54 +30,81 @@ body {
   background-position: center;
   min-height: 400px; 
 }
-/* Efeito de hover para os cards de serviço */
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   transition: all 0.3s ease-in-out;
 }
 .btn-dourado {
-  background-color: #DAA520; /* Um tom de dourado (GoldenRod) */
+  background-color: #DAA520; 
   border-color: #DAA520;
-  color: #ffffff; /* Cor do texto (branco) */
+  color: #ffffff; 
 }
 
-/* Efeito opcional ao passar o mouse */
+
 .btn-dourado:hover {
-  background-color: #B8860B; /* Dourado um pouco mais escuro */
+  background-color: #B8860B; 
   border-color: #B8860B;
   color: #ffffff;
 }
 .btn-dourado:active,
 .btn-dourado:focus {
-  background-color: #B8860B !important; /* Usa a cor do hover */
+  background-color: #B8860B !important;
   border-color: #B8860B !important;
   color: #ffffff !important;
-  box-shadow: none !important; /* ESSENCIAL: Remove o brilho azul do Bootstrap */
+  box-shadow: none !important; 
 }
 .text-dourado {
-  color: #DAA520; /* Ou o tom de dourado que você preferir, por exemplo, #FFD700 */
+  color: #DAA520; 
 }
 .navcolor{
   background-color: #fefefe;
 }
-/* O container do item do portfólio */
+
 .portfolio-item {
   position: relative;
-  overflow: hidden; /* ESSENCIAL: Esconde a parte da imagem que "cresce" para fora */
-  border-radius: 0.5rem; /* Bordas arredondadas */
+  overflow: hidden; 
+  border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* A imagem dentro do container */
+
 .portfolio-image {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.4s ease; /* Animação suave */
+  transition: transform 0.4s ease; 
 }
 
-/* O efeito de hover: quando o mouse passa sobre o item, a imagem cresce */
 .portfolio-item:hover .portfolio-image {
-  transform: scale(1.1); /* Amplia a imagem em 10% */
+  transform: scale(1.1); 
+}
+@media (max-width: 768px) {
+
+  /* 1. Reduz o espaçamento geral da página em telas pequenas */
+  body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* 2. Diminui drasticamente o tamanho da fonte do título principal */
+  .hero-section h1 {
+    font-size: 2.5rem; /* Tamanho bem menor que o 'display-4' */
+    line-height: 1.2; /* Melhora a legibilidade entre linhas */
+  }
+
+  /* 3. Ajusta o tamanho do subtítulo e o espaçamento da seção Hero */
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .hero-section {
+    padding: 4rem 1rem; /* Reduz o espaçamento vertical */
+    min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  /* 4. Ajusta os títulos das outras seções */
+  .display-5 {
+    font-size: 2rem;
+  }
 }
