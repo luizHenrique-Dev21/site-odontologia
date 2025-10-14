@@ -5,10 +5,10 @@ import { Instagram, Facebook, Youtube } from 'lucide-react';
 
 const Contato = () => {
   // --- INFORMAÇÕES PERSONALIZÁVEIS ---
-  const endereco = "R. Francisco Otaviano, 798 - Jardim Chapadão, Campinas - SP, 13070-056";
+  const endereco = "R. José Rosolém, 300 - sala 3 - Jardim Garcia, Campinas - SP, 13060-222";
   const telefone = "5519981087716"; // Use o formato internacional: País+DDD+Número
   // Link "Compartilhar" do Google Maps
-  const googleMapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500.1718669859042!2d-47.07441551371677!3d-22.882041785948783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7266e6c6817%3A0x4fe84486fa0018d5!2sDr%20Jo%C3%A3o%20Junior!5e1!3m2!1spt-BR!2sbr!4v1760462412795!5m2!1spt-BR!2sbr"
+  const googleMapsUrl ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d343.5214566760429!2d-47.103704791349344!3d-22.915611807905837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c616c0c6f2a7%3A0x6f8497f60d54a4b2!2sOdontologia%20Dr.%20Jo%C3%A3o%20Junior%20crosp%3A120767!5e1!3m2!1spt-BR!2sbr!4v1760473308897!5m2!1spt-BR!2sbr"
   const whatsappUrl = `https://wa.me/${telefone}?text=${encodeURIComponent("Olá! Gostaria de agendar uma avaliação.")}`;
 
   return (
