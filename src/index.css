@@ -6,20 +6,20 @@ html, body {
 /* 1. Reset e Fundo do Palco */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f2f5;
+  background-color: #f0f2f5; /* Fundo cinza do "palco" */
   margin: 0;
   padding: 0;
 }
 
 /* 2. Estilos para o container principal do site */
 .site-container {
-  max-width: 1140px; /* Largura máxima para desktops */
-  width: 100%;
-  margin: 2rem auto; /* 2rem de margem em cima/embaixo, 'auto' nas laterais para centralizar */
+  max-width: 1140px; /* Largura máxima do conteúdo no desktop */
+  width: 95%; /* Largura flexível, mas não cola nas bordas */
+  margin: 2rem auto; /* Centraliza a caixa na vertical e horizontal */
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  /* IMPORTANTE: Removido o 'overflow: hidden' daqui para não cortar sombras ou elementos */
+  border-radius: 8px; /* Bordas arredondadas restauradas */
+  overflow: hidden; /* Garante que o conteúdo (como a imagem do Hero) fique dentro das bordas */
 }
 /* 3. Estilos do Hero (ajustados) */
 .hero-section {
@@ -83,66 +83,45 @@ body {
 }
 /* Estilos para TABLETS (até 768px) */
 @media (max-width: 768px) {
-  /* Em telas menores, o container ocupa a tela toda, sem margens ou bordas */
+  /* Em telas menores, o container ocupa a tela toda */
   .site-container {
+    width: 100%;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
   }
 
-  /* ... o resto dos seus estilos responsivos para fontes e padding podem continuar aqui ... */
-  /* Exemplo: */
-  .hero-section h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-  }
-  .hero-section {
-    padding: 5rem 1rem;
-    min-height: auto;
-  }
-  .display-5 {
-    font-size: 2.2rem;
-  }
-  section.py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
+  /* ... (outras regras de responsividade que já funcionavam bem) ... */
+  .hero-section h1 { font-size: 2.8rem; line-height: 1.2; }
+  .hero-section { padding: 5rem 1rem; min-height: auto; }
+  .display-5 { font-size: 2.2rem; }
+  section.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
 }
 
-/* Estilos ESPECÍFICOS PARA CELULARES (até 480px) */
 @media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 2.1rem;
-  }
-  .hero-section p {
-    font-size: 1rem;
-  }
-  .hero-section .btn {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-  .hero-section {
-    padding: 4rem 1rem;
-  }
-  .display-5 {
-    font-size: 1.8rem;
-  }
-  section.py-5 {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
-  }
-  #depoimentos .carousel-item > div {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-  /* Garante que imagens e outros conteúdos não vazem */
+  /* ... (regras específicas para celulares) ... */
+  .hero-section h1 { font-size: 2.1rem; }
+  .hero-section p { font-size: 1rem; }
+  .hero-section .btn { font-size: 1rem; padding: 0.8rem 1.5rem; }
+  .hero-section { padding: 4rem 1rem; }
+  .display-5 { font-size: 1.8rem; }
+  section.py-5 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  #depoimentos .carousel-item > div { padding-left: 1rem !important; padding-right: 1rem !important; }
+  
   img {
     max-width: 100%;
     height: auto;
   }
   .portfolio-item {
-    border-radius: 0; /* Remover bordas arredondadas em mobile para fotos */
-    box-shadow: none; /* Remover sombra em mobile para fotos */
+    border-radius: 0; 
+    box-shadow: none; 
   }
+}
+
+.logo {
+  max-width: 100%; 
+}
+.logo img {
+  max-height: 20%; /* Defina a altura máxima */
+  width: auto;
 }

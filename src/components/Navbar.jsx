@@ -8,11 +8,11 @@ const AppNavbar = () => {
   return (
     <Navbar expand="xl" className="shadow-sm p-3 navcolor">
       {/* 2. Substitua o texto pela tag de imagem */}
-      <Navbar.Brand href="#inicio">
+      <Navbar.Brand href="#inicio" >
         <img
           src={logo}
           height="80" // Ajuste a altura conforme necessário
-          className="d-inline-block align-top"
+          className="d-inline-block align-top logo"
           alt="Logo da clínica João Junior"
         />
       </Navbar.Brand>

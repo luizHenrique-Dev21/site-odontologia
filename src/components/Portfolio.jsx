@@ -27,7 +27,7 @@ const Portfolio = () => {
               <img 
                 src={image.src} 
                 alt={image.alt} 
-                className="img-fluid portfolio-image" 
+                className="img-fluid portfolio-image rounded" 
               />
             </div>
           </Col>
